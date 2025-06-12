@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Developer | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="custom-cursor"></div>
+
+  <!-- Header -->
+  <header>
+    <h1>Vision in Motion</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="profile-box">
+        <div class="profile-ring">
+          <img src="srp.jpg"alt="Srushti Patil" class="profile-pic" />
+        </div>
+        <a href="#contact" class="btn profile-btn">Connect With Me</a>
+      </div>
+      <div class="intro">
+        <h2>Hello, I'm <span>Srushti Patil</span></h2>
+        <p>Web Developer | Creative Thinker | Experience Builder </p>
+<p>I code with purpose and design with passion.</p>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- About Section -->
+  <section id="about">
+    <h3>About Me</h3>
+    <p><strong>Hello! I'm Srushti Patil, a passionate and detail-oriented Web Developer and Creative Engineer based in India.  
+I specialize in crafting dynamic, responsive, and aesthetically driven websites that merge functionality with beautiful design.
+
+With a strong foundation in HTML, CSS, JavaScript, and modern frameworks, I transform complex ideas into clean, efficient code. But I don’t stop at functionality — I believe in creating experiences that are interactive, engaging, and user-centered.
+
+Beyond the code, I’m driven by curiosity, creativity, and a love for innovation. Whether I’m designing a sleek portfolio, building a landing page, or experimenting with animations and VFX, I aim to leave a memorable digital footprint.
+
+When I’m not coding, you’ll find me exploring design trends, fine-tuning animations, or diving into futuristic web ideas.
+
+Let’s build something extraordinary together.
+</p></strong>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h3>Skills</h3>
+    <div class="skills-container">
+      <button class="skill-btn">HTML5</button>
+      <button class="skill-btn">CSS3</button>
+      <button class="skill-btn">JavaScript</button>
+    
+      <button class="skill-btn">C/C++</button>
+      <button class="skill-btn">Python</button>
+    
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h3>Projects</h3>
+    <div class="project-wrapper">
+  
+      <div class="project-card">
+        <h4>🎤 Concert Booking</h4>
+        <p>This project is a full-fledged concert event landing page with an integrated booking system. It showcases multiple sections such as performers, schedule, tickets, venue info, gallery, and contact. Each section is built on a separate HTML page and hyperlinked with smooth navigation and subtle animations.</p>
+      </div>
+      <div class="project-card">
+        <h4>💻 Creative Portfolio</h4>
+        <p>This futuristic portfolio with animated UI, custom cursor, and button skills!This is my personal creative portfolio designed to make a strong impression while showcasing my development and design capabilities. The site blends modern visual aesthetics with strong usability.</p>
+      </div>
+      <div class="project-card">
+      <h4>🎛 Calculator</h4>
+        <p>A clean and responsive calculator designed for daily use, featuring a simple yet intuitive UI. This project focuses on DOM manipulation, event handling, and basic arithmetic logic. Built to be lightweight, it works seamlessly on both desktop and mobile devices.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h3>Contact Me</h3>
+    <form class="contact-grid">
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <textarea placeholder="Your Message" required></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Srushti Patil | Built with ❤️ </p>
+  </footer>
+
+  <!-- Cursor Script -->
+  <script>
+    const cursor = document.querySelector('.custom-cursor');
+    document.addEventListener('mousemove', e => {
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+/* Reset & Cursor */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #0ff;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.1s;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #0ff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  padding: 70px 50px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr; /* More space for profile image */
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+
+
+.profile-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-ring {
+  position: relative;
+  width: 400px;          /* increased from 300px */
+  height: 400px;
+  padding: 10px;
+  border-radius: 50%;
+  background: conic-gradient(#0ff, #0040ff, #0ff);
+}
+
+.profile-pic {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px #0ff;
+}
+
+
+
+
+.profile-ring::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background: #000;
+  border-radius: 50%;
+}
+
+
+
+.profile-btn {
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 16px 40px; /* more padding for a larger button */
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+
+.intro h2 {
+  font-size: 3rem; /* was 2.3rem */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.3rem; /* was 1.1rem */
+  color: #aaa;
+}
+
+
+
+.intro h2 span {
+  color: #0ff;
+}
+
+
+
+/* Section Common */
+section {
+  padding: 60px 50px;
+}
+
+section h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+  text-align: center; /* 👈 This centers the title */
+}
+
+.skills {
+  padding: 40px 60px; /* Adds space on the left */
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;              /* Wrap to new line if needed */
+  justify-content: center;      /* ✅ Center buttons horizontally */
+  gap: 15px;                    /* Space between buttons */
+  padding: 20px 0;
+}
+
+
+.skill-btn {
+  padding: 14px 30px;
+  background: transparent;
+  border: 2px solid #0ff;
+  color: #0ff;
+  border-radius: 30px;
+  font-weight: bold;
+  min-width: 160px;
+  text-align: center;
+  transition: 0.4s ease;
+  
+  /* 🔧 Add this: */
+  margin-left: 0;
+  margin-right: 0;
+  align-self: flex-start;
+}
+
+
+
+.skill-btn:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 15px #0ff;
+}
+
+/* Projects */
+.project-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  padding: 20px;
+  background: #111;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #0ff;
+}
+
+.project-card h4 {
+  color: #0ff;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #ccc;
+}
+
+/* Contact */
+#contact {
+  text-align: center;
+  background: #0a0a0a;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.contact-grid textarea {
+  grid-column: span 2;
+  height: 100px;
+}
+
+input, textarea {
+  padding: 12px;
+  background: transparent;
+  border: 2px solid #0ff;
+  color: #fff;
+  border-radius: 8px;
+}
+
+button {
+  grid-column: span 2;
+  margin: auto;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 30px;
+  border: 2px solid #0ff;
+  background: transparent;
+  color: #0ff;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 15px #0ff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f0f0f;
+  font-size: 0.9rem;
+  color: #777;
+}
